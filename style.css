@@ -1,6 +1,6 @@
 :root{
-    --primary-color: #3D3A4B;
-    --secondary-color: #E3DFFF;
+    --primary-color: #7494EA;
+    --secondary-color: #222221;
 }
 body{
     background-color: var(--secondary-color);
@@ -58,6 +58,7 @@ body{
     align-items: center;
 }
 .content a{
+    color: var(--primary-color);
     font-family: "Outfit";
     font-size: 150px;
     font-weight: 900;

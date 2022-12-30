@@ -11,6 +11,7 @@ async function loadQuotes(){
         quotes[i].auther = quotes_txt[i].split("--")[1].split(".")[0];
     }
     console.log(quotes);
+    init();
 }
 const quotesContainer = document.getElementById("content");
 const createquotes = () => {
@@ -28,6 +29,7 @@ const createquotes = () => {
             </a>
             <div class = "quote-line"></div>
   `;
+  quotesContainer.appendChild(quote_element)
 
 };
 const addquotess = async () => {
@@ -49,11 +51,10 @@ const handleInfiniteScroll = () => {
 };
 
 async function init() {
-loadQuotes();
   window.addEventListener("scroll", handleInfiniteScroll);
   while (document.body.scrollHeight <= window.innerHeight) {
-    await createquotes();
+    createquotes();
   }
 }
-init();
+loadQuotes();
 

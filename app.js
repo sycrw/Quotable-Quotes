@@ -17,6 +17,7 @@ const quotesContainer = document.getElementById("content");
 const createquotes = () => {
     const quoteContent = quotes[Math.floor(Math.random() * quotes.length)];
   let quote_element = document.createElement("div");
+  quote_element.className = "quote";
   quote_element.innerHTML = `
             <a class = "quote-text">
                ${quoteContent.text}
